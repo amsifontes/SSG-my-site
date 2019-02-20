@@ -1,5 +1,30 @@
 def main():
 
+    pages = [
+        {
+            'input': 'content/index.html',
+            'output': 'docs/index.html',
+            'title': 'Homepage',
+        },
+        {
+            'input': 'content/bio.html',
+            'output': 'docs/bio.html',
+            'title': 'Bio',
+        },
+        {
+            'input': 'content/blog.html',
+            'output': 'docs/blog.html',
+            'title': 'Blog',
+        },
+        {
+            'input': 'content/projects.html',
+            'output': 'docs/projects.html',
+            'title': 'Projects',
+        },
+
+        ]
+
+
     print("website fragments... assemble!!!")
     # ingest top and bottom
     top = open('templates/top.html').read()
