@@ -1,5 +1,12 @@
-def main():
+def ingest_base(base_file_path):
+    base_file = open(base_file_path).read()
+    return base_file
 
+def content_insert(template, content, insert_marker="{{ content }}"):
+    output = template.replace(insert_marker, content)
+    return output
+
+def main():
     pages = [
         {
             'input': 'content/index.html',
@@ -21,9 +28,7 @@ def main():
             'output': 'docs/projects.html',
             'title': 'Projects',
         },
-
         ]
-
 
     print("website fragments... assemble!!!")
     # ingest top and bottom
@@ -32,11 +37,12 @@ def main():
     # print("top and bottom are in position")
 
     #ingest base template
-    template = open('templates/base.html').read()
+    template = ingest_base('templates/base.html')
 
     for page in pages:
         content = open(page['input']).read()
-        full_page = template.replace("{{ content }}", content)
+        # full_page = template.replace("{{ content }}", content)
+        full_page = content_insert(template, content)
         open(page['output'], 'w+').write(full_page)
 
         #
