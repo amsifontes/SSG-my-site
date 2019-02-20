@@ -1,5 +1,5 @@
-Anthony M. Sifontes Kickstart Coding Bootcamp HW #2
+Anthony M. Sifontes Kickstart Coding Bootcamp HW #3
 
-Objective: create static site generator leveraging Python and Bash
+Objective: Refactor HW#2's static site generator leveraging Python functions and loops
 
-To build site, run build.py or build.sh.
+To build site, run build.py
