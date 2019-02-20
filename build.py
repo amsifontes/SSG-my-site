@@ -27,15 +27,22 @@ def main():
 
     print("website fragments... assemble!!!")
     # ingest top and bottom
-    top = open('templates/top.html').read()
-    bottom = open('templates/bottom.html').read()
-    print("top and bottom are in position")
+    # top = open('templates/top.html').read()
+    # bottom = open('templates/bottom.html').read()
+    # print("top and bottom are in position")
+
+    #ingest base template
+    template = open('templates/base.html').read()
 
     for page in pages:
         content = open(page['input']).read()
-        open(page['output'], 'a+').write(top)
-        open(page['output'], 'a+').write(content)
-        open(page['output'], 'a+').write(bottom)
+        full_page = template.replace("{{ content }}", content)
+        open(page['output'], 'w+').write(full_page)
+
+        #
+        # open(page['output'], 'a+').write(top)
+        # open(page['output'], 'a+').write(content)
+        # open(page['output'], 'a+').write(bottom)
 
     # # Read index
     # print("reading index...")
