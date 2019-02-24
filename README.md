@@ -1,5 +1,5 @@
-Anthony M. Sifontes Kickstart Coding Bootcamp HW #3
+BY: Anthony M. Sifontes
 
-Objective: Refactor HW#2's static site generator leveraging Python functions and loops
+Objective: Refactor static site generator leveraging Python functions and loops
 
-To build site, run build.py
+Instructions: To build site, run build.py
